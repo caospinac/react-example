@@ -27,7 +27,7 @@ class App extends Component {
 
   handleDeleteClick = ({ target }) => {
     const { data } = this.state;
-    const i = target.value;
+    const i = Number(target.value);
     if (i < 0) return;
     this.setState({
       data: data.slice(0, i).concat(data.slice(i + 1, data.length))
